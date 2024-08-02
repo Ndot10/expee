@@ -1,0 +1,38 @@
+{
+    "schema_version": 1,
+    "quilt_loader": {
+        "group": "${group}",
+        "id": "expee",
+        "version": "${version}",
+        "metadata": {
+            "name": "expee",
+            "description": "Allows players to drop experience orbs.",
+            "contributors": {
+                "SunnyKnight1018": "Owner"
+            },
+            "contact": {},
+            "icon": "assets/expee/icon.png",
+            "license": "MPL-2.0"
+        },
+        "intermediate_mappings": "net.fabricmc:intermediary",
+        "entrypoints": {
+            "init":        "coffee.dislike.expee.Expee",
+            "client_init": "coffee.dislike.expee.ExpeeClient"
+        },
+        "depends": [
+            {
+                "id": "quilt_loader",
+                "versions": ">=0.19.1"
+            },
+            {
+                "id": "quilted_fabric_api",
+                "versions": ">=7.0.2"
+            },
+            {
+                "id": "minecraft",
+                "versions": ">=1.20.5"
+            }
+        ]
+    },
+    "mixin": "expee.mixins.json"
+}
